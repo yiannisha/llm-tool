@@ -37,7 +37,7 @@ class TestTool(unittest.TestCase):
                     'type': 'object',
                     'properties': {
                         'a': {
-                            'type': 'str',
+                            'type': 'string',
                             'description': 'this is the description for a',
                         },
                         'b': {
@@ -145,7 +145,7 @@ class TestTool(unittest.TestCase):
                         'type': 'object',
                         'properties': {
                             'a': {
-                                'type': 'str',
+                                'type': 'string',
                                 'description': 'this is the description for a',
                             },
                             'b': {
@@ -187,7 +187,7 @@ class TestGlobalToolConfig(unittest.TestCase):
 class TestGetTypeName(unittest.TestCase):
     def test_primitives(self):
         self.assertEqual(get_type_name(int), "int")
-        self.assertEqual(get_type_name(str), "str")
+        self.assertEqual(get_type_name(str), "string")
         self.assertEqual(get_type_name(float), "float")
         self.assertEqual(get_type_name(bool), "bool")
 

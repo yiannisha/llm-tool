@@ -41,7 +41,9 @@ class DefinedFunction():
 def get_type_name(type_: Union[type, _BaseGenericAlias, None]) -> str:
     
     # _BaseGenericAlias
-    if hasattr(type_, '_name'):
+    if type_ is str:
+        return 'string'
+    elif hasattr(type_, '_name'):
         return type_._name
     # implements __name__
     elif hasattr(type_, '__name__'):
